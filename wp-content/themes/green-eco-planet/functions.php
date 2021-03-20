@@ -117,8 +117,6 @@ add_filter( 'bizberg_footer_social_icon_background', function(){
 
 add_filter( 'bizberg_footer_social_icon_color', function(){
     return '#fff';
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
 
 /** ADD GOOGLE ANALYTICS TO HEAD */
@@ -139,9 +137,3 @@ function google_site_tag() {
 // Add to admin and front end head
 add_action( 'admin_head', 'google_site_tag' );
 add_action( 'wp_head', 'google_site_tag' );
-=======
-});
->>>>>>> parent of 6eeec4e (test commit to live site & google analytics)
-=======
-});
->>>>>>> parent of 6eeec4e (test commit to live site & google analytics)
