@@ -24,3 +24,7 @@ body{
 #responsive-menu .page-item-10{
     display: none;
 }
+
+#footer{
+    position: relative;
+}
