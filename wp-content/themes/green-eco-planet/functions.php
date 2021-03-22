@@ -34,7 +34,7 @@ add_filter( 'bizberg_header_menu_color_hover_sticky_menu', 'green_eco_planet_cha
 add_filter( 'bizberg_header_button_color_sticky_menu', 'green_eco_planet_change_theme_color' );
 add_filter( 'bizberg_header_button_color_hover_sticky_menu', 'green_eco_planet_change_theme_color' );
 function green_eco_planet_change_theme_color(){
-    return '#6ab43e';
+    return '#1DB954';
 }
 
 add_filter( 'bizberg_header_button_border_color', 'green_eco_planet_btn_border_color' );
@@ -48,7 +48,7 @@ function green_eco_planet_btn_border_color(){
 */
 add_filter( 'bizberg_header_menu_color_hover', 'green_eco_planet_header_menu_color_hover' );
 function green_eco_planet_header_menu_color_hover(){
-    return '#6ab43e';
+    return '#1DB954';
 }
 
 /**
@@ -56,7 +56,7 @@ function green_eco_planet_header_menu_color_hover(){
 */
 add_filter( 'bizberg_header_button_color', 'green_eco_planet_header_button_color' );
 function green_eco_planet_header_button_color(){
-    return '#6ab43e';
+    return '#1DB954';
 }
 
 /**
@@ -64,19 +64,19 @@ function green_eco_planet_header_button_color(){
 */
 add_filter( 'bizberg_header_button_color_hover', 'green_eco_planet_header_button_color_hover' );
 function green_eco_planet_header_button_color_hover(){
-    return '#6ab43e';
+    return '#1DB954';
 }
 
 add_filter( 'bizberg_slider_title_box_highlight_color', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_slider_arrow_background_color', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_slider_dot_active_color', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_slider_gradient_primary_color', function(){
@@ -84,35 +84,35 @@ add_filter( 'bizberg_slider_gradient_primary_color', function(){
 });
 
 add_filter( 'bizberg_read_more_background_color', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_read_more_background_color_2', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_link_color', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_link_color_hover', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_blog_listing_pagination_active_hover_color', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_sidebar_widget_link_color_hover', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_sidebar_widget_title_color', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_footer_social_icon_background', function(){
-    return '#6ab43e';
+    return '#1DB954';
 });
 
 add_filter( 'bizberg_footer_social_icon_color', function(){
