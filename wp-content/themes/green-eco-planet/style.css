@@ -34,9 +34,8 @@ Requires PHP: 5.6
 }
 
 .cta-green{
-    background-color: var(--green);
-    border: none;
-    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid white;
     padding: 12px 35px;
     font-size: 18px;
     color: white;
@@ -44,7 +43,6 @@ Requires PHP: 5.6
     font-weight: 700;
     text-transform: uppercase;
 }
-
     
 .cta-green:hover{
     background-color: #488723;

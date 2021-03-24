@@ -119,7 +119,8 @@ add_filter( 'bizberg_footer_social_icon_color', function(){
     return '#fff';
 });
 
-/** ADD GOOGLE ANALYTICS TO HEAD */
+/** #### CUSTOM STUFF #### */
+/** ------------------ ADD GOOGLE ANALYTICS TO HEAD ------------------*/
 function google_site_tag() {
     echo "
         <!-- Global site tag (gtag.js) - Google Analytics -->
