@@ -1,0 +1,21 @@
+2021-03-30T16:49:34+00:00 CRITICAL require(): Failed opening required 'D:\xampp\htdocs\plantenpassernl/wp-content/themes/bizberg/inc/tracking-scripts.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\plantenpassernl\wp-content\themes\green-eco-planet\functions.php on line 125
+
+2021-03-30T16:51:26+00:00 CRITICAL require(): Failed opening required 'D:\xampp\htdocs\plantenpassernl/wp-content/themes/bizberg\inc\tracking-scripts.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\plantenpassernl\wp-content\themes\green-eco-planet\functions.php on line 125
+
+2021-03-30T21:03:15+00:00 CRITICAL require(): Failed opening required 'D:\xampp\htdocs\plantenpassernl/wp-content/themes/bizberg/inc/tracking-scripts.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\plantenpassernl\wp-content\themes\green-eco-planet\functions.php on line 125
+
+2021-03-30T21:21:36+00:00 CRITICAL require(): Failed opening required 'D:\xampp\htdocs\plantenpassernl/wp-content/themes/bizberg/inc/tracking-scripts.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\plantenpassernl\wp-content\themes\green-eco-planet\functions.php on line 125
+
+2021-03-30T21:22:24+00:00 CRITICAL require(): Failed opening required 'D:\xampp\htdocs\plantenpassernl/wp-content/themes/bizberg/inc/tracking-scripts.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\plantenpassernl\wp-content\themes\green-eco-planet\functions.php on line 125
+
+2021-03-30T21:23:15+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function plugin_dir_path(), 0 passed in D:\xampp\htdocs\plantenpassernl\wp-content\themes\green-eco-planet\functions.php on line 125 and exactly 1 expected in D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php:754
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\themes\green-eco-planet\functions.php(125): plugin_dir_path()
+#1 D:\xampp\htdocs\plantenpassernl\wp-settings.php(525): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\plantenpassernl\wp-config.php(91): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-load.php(37): require_once('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-blog-header.php(13): require_once('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\plantenpassernl\index.php(17): require('D:\\xampp\\htdocs...')
+#6 {main}
+  thrown in D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php on line 754
+
