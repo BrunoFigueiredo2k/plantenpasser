@@ -19,3 +19,53 @@ Stack trace:
 #6 {main}
   thrown in D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php on line 754
 
+2021-03-30T22:42:42+00:00 CRITICAL Cannot redeclare include_component() (previously declared in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:15) in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 31
+
+2021-03-30T22:42:48+00:00 CRITICAL Cannot redeclare include_component() (previously declared in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:15) in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 31
+
+2021-03-30T22:42:48+00:00 CRITICAL Cannot redeclare include_component() (previously declared in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:15) in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 31
+
+2021-03-30T22:48:54+00:00 CRITICAL Uncaught Error: Call to undefined function include_component() in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:17
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+# in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 17
+
+2021-03-30T22:50:54+00:00 CRITICAL Uncaught Error: Call to undefined function array_key_last() in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php:17
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(17): include_component('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#7 D:\xampp\htd in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 17
+
+2021-03-30T22:51:08+00:00 CRITICAL Uncaught Error: Call to undefined function array_key_last() in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php:17
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(17): include_component('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#7 D:\xampp\htd in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 17
+
+2021-03-30T22:52:58+00:00 CRITICAL Uncaught Error: Call to undefined function array_key_last() in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php:17
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(17): include_component('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#7 D:\xampp\htd in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 17
+
