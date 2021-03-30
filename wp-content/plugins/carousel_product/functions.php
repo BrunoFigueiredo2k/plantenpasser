@@ -9,8 +9,8 @@
 */
 
 define('PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('CSS_COMPONENTS_DIR', PLUGIN_DIR . 'css_components/');
-define('JS_COMPONENTS_DIR', PLUGIN_DIR . 'js_components/');
+define('CSS_COMPONENTS_DIR', PLUGIN_DIR . 'components/css/');
+define('JS_COMPONENTS_DIR', PLUGIN_DIR . 'components/js/');
 
 add_shortcode('carousel_shortcode', 'product_carousel');
 function product_carousel(){
@@ -18,6 +18,7 @@ function product_carousel(){
   ?>
     <?php 
       // Data model
+      // TODO: to be filled
       $data = array(
         'plants' => array(
           'name' => '',
