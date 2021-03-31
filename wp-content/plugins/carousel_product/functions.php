@@ -20,9 +20,9 @@ define('JS_COMPONENTS_DIR', PLUGIN_DIR . 'components/js/');
 add_shortcode('carousel_shortcode', 'product_carousel');
 function product_carousel(){
   include_component(CSS_COMPONENTS_DIR . 'carousel.css');
+  include_component(JS_COMPONENTS_DIR . 'carousel.js');
   ?>
     <?php 
-
       $data = array(
         'plants' => array(),
         'pots' => array()
@@ -37,38 +37,43 @@ function product_carousel(){
         ?>
         <!-- Carousel -->
         <div class="slideshow-container mt-4">
+          <div class="row">
+            <div class="col-lg-6">
 
-          <!-- Loop through the plants and display in carousel -->
-          <?php
-          $carousel_product_class = "product-".strval(uniqid());
+              <!-- Loop through the plants and display in carousel -->
+              <?php
+              $carousel_slides_class = "slides-".strval(uniqid());
 
-          $numItems = count($data[$key][0]);
-          $i = 0;
-          foreach ($data[$key][0] as $key => $product) { ?>
-            <div class="<?php echo $carousel_product_class?> mySlides fade" style="display: <?php 
-              // Displays only the last item as 'block', this is the first product seen in carousel
-              if(++$i === $numItems) { echo "block"; } else { echo "none;"; };
-            ?>">
-              <h1 class="text-center" style="margin: 20px 0;"><?php echo $product['name']; ?></h1>
-              <img src="<?php echo $product['img_url']; ?>" style="max-height: 300px;">
+              // Convert php variable for the classname to js so that we can use it in onclick function plusSlides as param
+              php_to_javascript_variables(array("carousel_slides_class_{$key}" => $carousel_slides_class));
+              ?>
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="return plusSlides(-1, carousel_slides_class_<?php echo $key ?>)">&#10094;</a>
+              <a class="next" onclick="return plusSlides(1, carousel_slides_class_<?php echo $key ?>)">&#10095;</a>
+
+              <?php
+              // Keeping count of index to determine whether last product in loop later
+              $numItems = count($data[$key][0]);
+              $i = 0;
+
+              foreach ($data[$key][0] as $key => $product) { ?>
+                <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
+                  // Displays only the last item as 'block', this is the first product seen in carousel
+                  if(++$i === $numItems) { echo "block"; } else { echo "none;"; };
+                ?>">
+                  <img src="<?php echo $product['img_url']; ?>" style="max-height: 300px;">
+                </div>
+              <?php } ?>
+
             </div>
-          <?php } ?>
-
-          <!-- Convert php variable for the classname to js so that we can use it in onclick function plusSlides as param -->
-          <?php php_to_javascript_variables(array("carousel_product_class" => $carousel_product_class)); ?>
-
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="return plusSlides(-1, carousel_product_class)">&#10094;</a>
-          <a class="next" onclick="return plusSlides(1, carousel_product_class)">&#10095;</a>
+          </div>
         </div>
 
         <?php
-        //TODO: fix this rendering of both carousels
-        break;
       }
     ?>
 
-    <?php include_component(JS_COMPONENTS_DIR . 'carousel.js'); ?>
+    <?php  ?>
       
     <?php
 }

@@ -96,7 +96,7 @@ function php_to_javascript_variables($object) {
       // Determine the type of variable
       switch (gettype($value)) {
           case "string":
-              echo "var {$property} = \"" . addslashes($value) . "\";";
+              echo "var {$property} = " . json_encode($value) . ";";
               break;
           case "integer":
               echo "var {$property} = " . addslashes($value) . ";";

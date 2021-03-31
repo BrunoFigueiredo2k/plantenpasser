@@ -120,5 +120,11 @@ add_filter( 'bizberg_footer_social_icon_color', function(){
     return '#fff';
 });
 
+function get_footer_shortcode(){
+    get_footer();
+}
+
+add_shortcode('get_footer', 'get_footer_shortcode');
+
 /** Tracking scripts import such as Google Analytics */
 require DIR . '/inc/tracking-scripts.php';
