@@ -31,4 +31,4 @@ function include_component($abs_file_dir) {
     }
 }
 
-/** ----------- CLASSES ----------- */
+/** ----------- REQUIRE MODELS ----------- */
