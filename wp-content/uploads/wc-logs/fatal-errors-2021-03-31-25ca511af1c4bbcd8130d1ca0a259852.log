@@ -1,0 +1,154 @@
+2021-03-31T16:02:34+00:00 CRITICAL Uncaught Error: Class 'Plant' not found in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:32
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plant in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 32
+
+2021-03-31T16:05:17+00:00 CRITICAL Uncaught Error: Class 'Plant' not found in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plant in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 34
+
+2021-03-31T16:05:27+00:00 CRITICAL Uncaught Error: Class 'Plant' not found in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plant in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 34
+
+2021-03-31T16:05:34+00:00 CRITICAL Uncaught Error: Class 'Plant' not found in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plant in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 34
+
+2021-03-31T16:05:58+00:00 CRITICAL Uncaught Error: Class 'Plant' not found in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:37
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plant in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 37
+
+2021-03-31T16:06:34+00:00 CRITICAL Uncaught Error: Class 'Plant' not found in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:37
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plant in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 37
+
+2021-03-31T16:06:37+00:00 CRITICAL Uncaught Error: Class 'Plant' not found in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:37
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plant in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 37
+
+2021-03-31T16:07:58+00:00 CRITICAL Uncaught Error: Cannot use object of type Plant as array in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:63
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\x in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 63
+
+2021-03-31T16:08:56+00:00 CRITICAL Uncaught Error: Cannot use object of type Plant as array in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:63
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\x in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 63
+
+2021-03-31T16:09:25+00:00 CRITICAL Uncaught Error: Cannot access private property Plant::$name in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:52
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 52
+
+2021-03-31T16:09:36+00:00 CRITICAL Uncaught Error: Cannot use object of type Plant as array in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:63
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\x in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 63
+
+2021-03-31T16:09:47+00:00 CRITICAL Uncaught Error: Cannot use object of type Plant as array in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:63
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\x in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 63
+
+2021-03-31T16:12:03+00:00 CRITICAL Uncaught Error: Cannot use object of type Plant as array in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:63
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\x in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 63
+
+2021-03-31T16:12:29+00:00 CRITICAL Uncaught Error: Cannot use object of type Plant as array in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:63
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#5 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1257): wc_format_content('<!-- wp:shortco...')
+#7 D:\x in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 63
+
