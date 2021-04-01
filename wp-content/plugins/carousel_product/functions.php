@@ -27,51 +27,53 @@ function product_carousel(){
         'plants' => array(),
         'pots' => array()
       );
+
+      array_push($data['plants'], get_products('plants'));
+      array_push($data['pots'], get_products('pots'));
       
-      array_push($data['plants'], get_all_plants());
-      array_push($data['pots'], get_all_pots());
+      // array_push($data['plants'], get_all_plants());
+      // array_push($data['pots'], get_all_pots());
     ?>
 
-    <?php 
-      foreach ($data as $key => $value) {
-        ?>
-        <!-- Carousel -->
-        <div class="slideshow-container mt-4">
-          <div class="row">
-            <div class="col-lg-6">
+    <div class="row">
+      <div class="col-lg-6">
+        <?php foreach ($data as $key => $value) { ?>
+          <!-- Carousel -->
+          <div class="slideshow-container mt-4">
+            <!-- Loop through the plants and display in carousel -->
+            <?php
+            $carousel_slides_class = "slides-".strval(uniqid());
 
-              <!-- Loop through the plants and display in carousel -->
-              <?php
-              $carousel_slides_class = "slides-".strval(uniqid());
+            // Convert php variable for the classname to js so that we can use it in onclick function plusSlides as param
+            php_to_javascript_variables(array("carousel_slides_class_{$key}" => $carousel_slides_class));
+            ?>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="return plusSlides(-1, carousel_slides_class_<?php echo $key ?>)">&#10094;</a>
+            <a class="next" onclick="return plusSlides(1, carousel_slides_class_<?php echo $key ?>)">&#10095;</a>
 
-              // Convert php variable for the classname to js so that we can use it in onclick function plusSlides as param
-              php_to_javascript_variables(array("carousel_slides_class_{$key}" => $carousel_slides_class));
-              ?>
-              <!-- Next and previous buttons -->
-              <a class="prev" onclick="return plusSlides(-1, carousel_slides_class_<?php echo $key ?>)">&#10094;</a>
-              <a class="next" onclick="return plusSlides(1, carousel_slides_class_<?php echo $key ?>)">&#10095;</a>
+            <?php
+            // Keeping count of index to determine whether last product in loop later
+            $numItems = count($data[$key][0]);
+            $i = 0;
 
-              <?php
-              // Keeping count of index to determine whether last product in loop later
-              $numItems = count($data[$key][0]);
-              $i = 0;
-
-              foreach ($data[$key][0] as $key => $product) { ?>
-                <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
-                  // Displays only the last item as 'block', this is the first product seen in carousel
-                  if(++$i === $numItems) { echo "block"; } else { echo "none;"; };
-                ?>">
-                  <img src="<?php echo $product['img_url']; ?>" style="max-height: 300px;">
-                </div>
-              <?php } ?>
-
-            </div>
+            foreach ($data[$key][0] as $key => $product) { ?>
+              <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
+                // Displays only the last item as 'block', this is the first product seen in carousel
+                if(++$i === $numItems) { echo "block"; } else { echo "none;"; };
+              ?>">
+                <img src="<?php echo $product['img_url']; ?>" style="max-height: 300px;">
+              </div>
+            <?php } ?>
           </div>
-        </div>
-
-        <?php
-      }
-    ?>
+        <?php } ?>
+      </div> <!-- col-lg-6 -->
+      <div class="col-lg-6">
+        <!-- Product info such as price comes here -->
+        <h1>Test</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam ut distinctio architecto exercitationem vel! Pariatur maxime dicta vitae, delectus distinctio sint consequuntur tempore ad suscipit alias exercitationem, quidem corrupti tenetur!</p>
+        <h4>$5,49</h4>
+      </div>
+    </div> <!-- row -->
 
     <?php  ?>
       

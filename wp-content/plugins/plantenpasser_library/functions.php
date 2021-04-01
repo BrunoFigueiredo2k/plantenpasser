@@ -31,58 +31,47 @@ function include_component($abs_file_dir) {
     }
 }
 
-function get_all_plants(){
-  // Get all plants by category
-  $plants = wc_get_products( array('category' => array( 'plants' ),'orderby'  => 'name') );
+function get_products($category){
+  $products = wc_get_products( array('category' => array( $category ),'orderby'  => 'name', 'limit' => 5) );
 
-  $array_plants = [];
+  $array_products = [];
 
-  foreach ($plants as $key => $plant) {
-    $image_id  = $plant->get_image_id();
+  // Create new instance of each product in products array with the custom classes, then push them to array
+  foreach ($products as $key => $product) {
+    //TODO: use category slug as first param to determine which class
+    $product_obj = create_instance_custom_obj($category, $product);
 
-    // Create new instance
-    $plant_obj = new Plant(
-      $plant->get_id(), 
-      $plant->get_name(), 
-      $plant->get_price(), 
-      $plant->get_length(), 
-      $plant->get_width(), 
-      wp_get_attachment_image_url( $image_id, 'full' )
-    );
-
-    // Push object to array thats been passed as argument 
-    array_push($array_plants, $plant_obj->get_object());
+    array_push($array_products, $product_obj->get_object());
   }
 
-  return $array_plants;
+  return $array_products;
 }
 
-function get_all_pots(){
-  // Get all pots by category
-  $pots = wc_get_products( array('category' => array( 'pots' ),'orderby'  => 'name') );
+function create_instance_custom_obj($category, $product){
+  $image_id  = $product->get_image_id();
 
-  $array_pots = [];
-
-  foreach ($pots as $key => $pot) {
-    $image_id  = $pot->get_image_id();
-
-    // Create new instance
-    $pot_obj = new Pot(
-      $pot->get_id(), 
-      $pot->get_name(), 
-      $pot->get_price(), 
-      $pot->get_length(), 
-      $pot->get_width(), 
-      'color', // TODO: color needs to be added as attribute
-      wp_get_attachment_image_url( $image_id, 'full' ),
-      $pot->get_weight()
-    );
-
-    // Push object to array thats been passed as argument 
-    array_push($array_pots, $pot_obj->get_object());
+  switch ($category) {
+    case 'plants':
+      return new Plant(
+        $product->get_id(), 
+        $product->get_name(), 
+        $product->get_price(), 
+        $product->get_length(), 
+        $product->get_width(), 
+        wp_get_attachment_image_url( $image_id, 'full' )
+      );
+    case 'pots':
+      return new Pot(
+        $product->get_id(), 
+        $product->get_name(), 
+        $product->get_price(), 
+        $product->get_length(), 
+        $product->get_width(), 
+        'color', // TODO: color needs to be added as attribute
+        wp_get_attachment_image_url( $image_id, 'full' ),
+        $product->get_weight()
+      );
   }
-
-  return $array_pots;
 }
 
 function php_to_javascript_variables($object) {

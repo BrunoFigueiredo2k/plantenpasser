@@ -1,0 +1,44 @@
+2021-04-01T10:03:48+00:00 CRITICAL Uncaught Error: Call to a member function get_object() on null in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php:44
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(32): get_products('pots')
+#1 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plantenpassern in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 44
+
+2021-04-01T10:03:49+00:00 CRITICAL Uncaught Error: Call to a member function get_object() on null in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php:44
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(32): get_products('pots')
+#1 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plantenpassern in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 44
+
+2021-04-01T11:38:44+00:00 CRITICAL Uncaught Error: Call to a member function get_object() on null in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php:44
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(32): get_products('pots')
+#1 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plantenpassern in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 44
+
+2021-04-01T11:38:46+00:00 CRITICAL Uncaught Error: Call to a member function get_object() on null in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php:44
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(32): get_products('pots')
+#1 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(287): do_shortcode('[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
+#7 D:\xampp\htdocs\plantenpassern in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 44
+
