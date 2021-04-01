@@ -18,4 +18,16 @@ function showSlides(n, className) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
+
+  updateProductData(n);
+}
+
+function updateProductData(n){
+  // TODO: fix the index 
+  // Showing product info on change carousel
+  let title = obj_plants.names[n] + " & " + obj_pots.names[n];
+  document.getElementById('names-products').innerText = title;
+
+  let totalPrice = obj_plants.prices[n] + obj_plants.prices[n];
+  document.getElementById('total-price').innerText = "Total: " + totalPrice + " EUR";
 }

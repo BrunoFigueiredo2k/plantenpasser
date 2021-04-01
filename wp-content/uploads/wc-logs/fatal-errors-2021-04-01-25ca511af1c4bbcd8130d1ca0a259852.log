@@ -42,3 +42,5 @@ Stack trace:
 #6 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-functions.php(1091): apply_filters('woocommerce_sho...', '<!-- wp:shortco...')
 #7 D:\xampp\htdocs\plantenpassern in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\plantenpasser_library\functions.php on line 44
 
+2021-04-01T11:51:33+00:00 CRITICAL Out of memory (allocated 46137344) (tried to allocate 65536 bytes) in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\elementor\includes\controls\slider.php on line 47
+

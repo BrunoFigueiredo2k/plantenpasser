@@ -28,6 +28,7 @@
       line-height: 20px;
       color: black;
       border: 1px solid;
+      border-radius: 5px;
     }
     
     /* Position the "next button" to the right */
@@ -41,26 +42,26 @@
       color: white !important;
     }
     
+    .bottom-carousel{
+      margin: 0 auto;
+      width: 55%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 10px 0;
+    }
+    
     /* Caption text */
-    .text {
-      color: #f2f2f2;
+    .name-product, .price-product {
       font-size: 15px;
       padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
     }
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
+
+    .price-product{
+      font-weight: bold;
     }
-    
+
+
     /* Fading animation */
     .fade {
       -webkit-animation-name: fade;

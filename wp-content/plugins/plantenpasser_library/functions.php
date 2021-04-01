@@ -33,14 +33,11 @@ function include_component($abs_file_dir) {
 
 function get_products($category){
   $products = wc_get_products( array('category' => array( $category ),'orderby'  => 'name', 'limit' => 5) );
-
   $array_products = [];
 
   // Create new instance of each product in products array with the custom classes, then push them to array
   foreach ($products as $key => $product) {
-    //TODO: use category slug as first param to determine which class
     $product_obj = create_instance_custom_obj($category, $product);
-
     array_push($array_products, $product_obj->get_object());
   }
 

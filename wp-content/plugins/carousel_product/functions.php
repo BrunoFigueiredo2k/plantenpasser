@@ -44,17 +44,22 @@ function product_carousel(){
             <?php
             $carousel_slides_class = "slides-".strval(uniqid());
 
+            $category = $key;
+
             // Convert php variable for the classname to js so that we can use it in onclick function plusSlides as param
-            php_to_javascript_variables(array("carousel_slides_class_{$key}" => $carousel_slides_class));
+            php_to_javascript_variables(array("carousel_slides_class_{$category}" => $carousel_slides_class));
             ?>
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="return plusSlides(-1, carousel_slides_class_<?php echo $key ?>)">&#10094;</a>
-            <a class="next" onclick="return plusSlides(1, carousel_slides_class_<?php echo $key ?>)">&#10095;</a>
+            <a class="prev" onclick="return plusSlides(-1, carousel_slides_class_<?php echo $category ?>)">&#10094;</a>
+            <a class="next" onclick="return plusSlides(1, carousel_slides_class_<?php echo $category ?>)">&#10095;</a>
 
             <?php
             // Keeping count of index to determine whether last product in loop later
             $numItems = count($data[$key][0]);
             $i = 0;
+
+            $product_names = [];
+            $product_prices = [];
 
             foreach ($data[$key][0] as $key => $product) { ?>
               <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
@@ -62,18 +67,38 @@ function product_carousel(){
                 if(++$i === $numItems) { echo "block"; } else { echo "none;"; };
               ?>">
                 <img src="<?php echo $product['img_url']; ?>" style="max-height: 300px;">
+                <p class="bottom-carousel">
+                  <span class="name-product"><?php echo $product['name'] . "\n";?></span>
+                  <span class="price-product"><?php echo $product['price']. " EUR"; ?></span>                  
+                </p>
               </div>
-            <?php } ?>
+
+              <?php 
+              // Push names and prices to the category js object
+              array_push($product_names, $product['name']);
+              array_push($product_prices, floatval($product['price']));
+            } 
+
+            // Convert object of prices and names of category to js object
+            php_to_javascript_variables(array("obj_{$category}" => array(
+              'names' => $product_names, 
+              'prices' => $product_prices
+            )));
+            ?>
+
           </div>
         <?php } ?>
       </div> <!-- col-lg-6 -->
       <div class="col-lg-6">
         <!-- Product info such as price comes here -->
-        <h1>Test</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam ut distinctio architecto exercitationem vel! Pariatur maxime dicta vitae, delectus distinctio sint consequuntur tempore ad suscipit alias exercitationem, quidem corrupti tenetur!</p>
-        <h4>$5,49</h4>
+        <h1 id="names-products"></h1><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam ut distinctio architecto exercitationem vel! Pariatur maxime dicta vitae, delectus distinctio sint consequuntur tempore ad suscipit alias exercitationem, quidem corrupti tenetur!</p><br>
+        <!-- TODO: php to js variable price of current active elements in carousel -->
+        <h4 id="total-price"></h4>
       </div>
     </div> <!-- row -->
+
+    <script> updateProductData(0);</script>
 
     <?php  ?>
       
