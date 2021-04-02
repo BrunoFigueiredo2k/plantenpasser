@@ -7,8 +7,9 @@ class Plant
     private $length;
     private $width;
     private $img_url;
+    private $description;
 
-    public function __construct($product_id, $name, $price, $length, $width, $img_url)
+    public function __construct($product_id, $name, $price, $length, $width, $img_url, $description)
     {
         $this->name = $product_id;
         $this->name = $name;
@@ -16,6 +17,7 @@ class Plant
         $this->length = $length;
         $this->width = $width;
         $this->img_url = $img_url;
+        $this->description = $description;
     }
 
     public function get_object() {
@@ -26,6 +28,7 @@ class Plant
             'length' => $this->length,    
             'width' => $this->width,    
             'img_url' => $this->img_url,    
+            'description' => $this->description,    
         );
 
         return $data;

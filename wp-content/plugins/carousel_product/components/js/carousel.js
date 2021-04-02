@@ -1,4 +1,6 @@
 let slideIndex = 1;
+let counters = [0, 0];
+let indexes = [0, 0]
 
 // Next/previous controls
 function plusSlides(n, className) {
@@ -19,15 +21,26 @@ function showSlides(n, className) {
   }
   slides[slideIndex-1].style.display = "block";
 
-  updateProductData(n);
+  updateProductData(className);
 }
 
-function updateProductData(n){
-  // TODO: fix the index 
+function updateProductData(className){
+  // Set counter for each category
+  if (className.includes('pots')){
+    counters[0] = slideIndex - 1;
+  } else if (className.includes('plants')){
+    counters[1] = slideIndex - 1;
+  }
+  
   // Showing product info on change carousel
-  let title = obj_plants.names[n] + " & " + obj_pots.names[n];
-  document.getElementById('names-products').innerText = title;
+  let title = obj_pots.names[counters[0]] + " & " + obj_plants.names[counters[1]];
+  document.getElementById('name-products').innerHTML = title;
 
-  let totalPrice = obj_plants.prices[n] + obj_plants.prices[n];
-  document.getElementById('total-price').innerText = "Total: " + totalPrice + " EUR";
+  let totalPrice = obj_pots.prices[counters[0]] + obj_plants.prices[counters[1]];
+  document.getElementById('total-price').innerHTML = `<b>Total:</b> ${totalPrice} EUR`;
+
+  document.getElementById('description').innerHTML = `
+    <b>Plant:</b> ${obj_plants.descriptions[counters[1]]}<br><br>
+    <b>Pot: </b> ${obj_pots.descriptions[counters[0]]}
+  `;
 }

@@ -55,7 +55,8 @@ function create_instance_custom_obj($category, $product){
         $product->get_price(), 
         $product->get_length(), 
         $product->get_width(), 
-        wp_get_attachment_image_url( $image_id, 'full' )
+        wp_get_attachment_image_url( $image_id, 'full' ),
+        $product->get_short_description()
       );
     case 'pots':
       return new Pot(
@@ -66,7 +67,8 @@ function create_instance_custom_obj($category, $product){
         $product->get_width(), 
         'color', // TODO: color needs to be added as attribute
         wp_get_attachment_image_url( $image_id, 'full' ),
-        $product->get_weight()
+        $product->get_weight(),
+        $product->get_short_description()
       );
   }
 }

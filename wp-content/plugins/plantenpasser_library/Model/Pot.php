@@ -9,8 +9,9 @@ class Pot
     private $color;
     private $img_url;
     private $weight;
+    private $description;
 
-    public function __construct($product_id, $name, $price, $length, $width, $color, $img_url, $weight)
+    public function __construct($product_id, $name, $price, $length, $width, $color, $img_url, $weight, $description)
     {
         $this->product_id = $product_id;
         $this->name = $name;
@@ -20,6 +21,7 @@ class Pot
         $this->color = $color;
         $this->img_url = $img_url;
         $this->weight = $weight;
+        $this->description = $description;
     }
 
     public function get_object() {
@@ -31,7 +33,8 @@ class Pot
             'width' => $this->width,    
             'color' => $this->color,    
             'img_url' => $this->img_url,    
-            'weight' => $this->weight,    
+            'weight' => $this->weight,   
+            'description' => $this->description 
         );
 
         return $data;

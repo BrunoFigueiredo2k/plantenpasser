@@ -30,9 +30,6 @@ function product_carousel(){
 
       array_push($data['plants'], get_products('plants'));
       array_push($data['pots'], get_products('pots'));
-      
-      // array_push($data['plants'], get_all_plants());
-      // array_push($data['pots'], get_all_pots());
     ?>
 
     <div class="row">
@@ -42,9 +39,9 @@ function product_carousel(){
           <div class="slideshow-container mt-4">
             <!-- Loop through the plants and display in carousel -->
             <?php
-            $carousel_slides_class = "slides-".strval(uniqid());
-
             $category = $key;
+
+            $carousel_slides_class = "slides-".$category;
 
             // Convert php variable for the classname to js so that we can use it in onclick function plusSlides as param
             php_to_javascript_variables(array("carousel_slides_class_{$category}" => $carousel_slides_class));
@@ -60,6 +57,7 @@ function product_carousel(){
 
             $product_names = [];
             $product_prices = [];
+            $product_descriptions = [];
 
             foreach ($data[$key][0] as $key => $product) { ?>
               <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
@@ -68,7 +66,7 @@ function product_carousel(){
               ?>">
                 <img src="<?php echo $product['img_url']; ?>" style="max-height: 300px;">
                 <p class="bottom-carousel">
-                  <span class="name-product"><?php echo $product['name'] . "\n";?></span>
+                  <span class="name-product"><?php echo $product['name'];?></span>
                   <span class="price-product"><?php echo $product['price']. " EUR"; ?></span>                  
                 </p>
               </div>
@@ -77,12 +75,14 @@ function product_carousel(){
               // Push names and prices to the category js object
               array_push($product_names, $product['name']);
               array_push($product_prices, floatval($product['price']));
+              array_push($product_descriptions, $product['description']);
             } 
 
             // Convert object of prices and names of category to js object
             php_to_javascript_variables(array("obj_{$category}" => array(
               'names' => $product_names, 
-              'prices' => $product_prices
+              'prices' => $product_prices,
+              'descriptions' => $product_descriptions
             )));
             ?>
 
@@ -91,16 +91,14 @@ function product_carousel(){
       </div> <!-- col-lg-6 -->
       <div class="col-lg-6">
         <!-- Product info such as price comes here -->
-        <h1 id="names-products"></h1><br>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam ut distinctio architecto exercitationem vel! Pariatur maxime dicta vitae, delectus distinctio sint consequuntur tempore ad suscipit alias exercitationem, quidem corrupti tenetur!</p><br>
+        <h1 id="name-products"></h1><br>
+        <p id="description"></p><br>
         <!-- TODO: php to js variable price of current active elements in carousel -->
         <h4 id="total-price"></h4>
       </div>
     </div> <!-- row -->
 
-    <script> updateProductData(0);</script>
-
-    <?php  ?>
+    <script> updateProductData(0); </script>
       
     <?php
 }
