@@ -16,7 +16,7 @@ define('PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('CSS_COMPONENTS_DIR', PLUGIN_DIR . 'components/css/');
 define('JS_COMPONENTS_DIR', PLUGIN_DIR . 'components/js/');
 
-/** Shortcode product carousel for frontend */
+/** Shortcode product carousel and product data for frontend */
 add_shortcode('carousel_shortcode', 'product_carousel');
 function product_carousel(){
   include_component(CSS_COMPONENTS_DIR . 'carousel.css');
@@ -49,6 +49,14 @@ function product_carousel(){
             <!-- Next and previous buttons -->
             <a class="prev" onclick="return plusSlides(-1, carousel_slides_class_<?php echo $category ?>)">&#10094;</a>
             <a class="next" onclick="return plusSlides(1, carousel_slides_class_<?php echo $category ?>)">&#10095;</a>
+
+            <script>
+              // Display the current carousel items stats to the page
+              // TODO: still not completely correct at first
+              document.addEventListener("DOMContentLoaded", function(){
+                updateProductData(carousel_slides_class_<?php echo $category ?>); 
+              });
+             </script>
 
             <?php
             // Keeping count of index to determine whether last product in loop later
@@ -89,16 +97,34 @@ function product_carousel(){
           </div>
         <?php } ?>
       </div> <!-- col-lg-6 -->
-      <div class="col-lg-6">
-        <!-- Product info such as price comes here -->
-        <h1 id="name-products"></h1><br>
-        <p id="description"></p><br>
-        <!-- TODO: php to js variable price of current active elements in carousel -->
-        <h4 id="total-price"></h4>
-      </div>
+      <?php display_product_data(); ?>
     </div> <!-- row -->
-
-    <script> updateProductData(0); </script>
       
     <?php
+}
+
+function display_product_data(){
+  ?>
+    <div class="col-lg-6">
+      <!-- Product info such as price comes here -->
+      <h1 id="name-products"></h1><br>
+      <p id="description"></p><br>
+      <h4 id="total-price"></h4><br>
+
+      <!-- Add to cart functionality -->
+      <form action="" method="post">
+        <input type="hidden" name="total_price">
+        <div class="product-quantity" data-title="Quantity">
+          <div class="quantity">
+            <div class="bizberg-shop-quantity">
+            <button type="button" class="minus">-</button>	
+              <input type="number" id="quantity_60675e4827cb3" class="input-text qty text" step="1" min="0" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
+              <button type="button" class="plus">+</button>
+            </div>	
+          </div>
+        </div><br>
+        <input type="submit" value="Add to Cart" class="btn-submit"/>
+      </form>
+    </div> <!-- col-lg-6 -->
+  <?php
 }
