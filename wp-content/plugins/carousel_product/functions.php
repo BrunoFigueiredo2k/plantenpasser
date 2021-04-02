@@ -63,9 +63,8 @@ function product_carousel(){
             $numItems = count($data[$key][0]);
             $i = 0;
 
-            $product_names = [];
-            $product_prices = [];
-            $product_descriptions = [];
+            // Declare empty arrays of product info per category
+            $product_names = $product_prices = $product_descriptions = [];
 
             foreach ($data[$key][0] as $key => $product) { ?>
               <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
@@ -112,6 +111,7 @@ function display_product_data(){
       <h4 id="total-price"></h4><br>
 
       <!-- Add to cart functionality -->
+      <!-- TODO: fix the endpoint functionality and DOM manipulation total price -->
       <form action="" method="post">
         <input type="hidden" name="total_price">
         <div class="product-quantity" data-title="Quantity">
