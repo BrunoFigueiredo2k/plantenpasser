@@ -22,6 +22,7 @@ add_shortcode('carousel_shortcode', 'product_carousel');
 function product_carousel(){
   include_component(CSS_COMPONENTS_DIR . 'carousel.css');
   include_component(JS_COMPONENTS_DIR . 'carousel.js');
+  include_component(JS_COMPONENTS_DIR . 'cart.js');
   ?>
     <?php 
       $data = array(
@@ -87,7 +88,7 @@ function product_carousel(){
             <!-- Modal image view -->
             <div class="modal fade" id="<?php echo $modal_id;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content" style="padding: 50%; background: url(<?php echo $product['img_url']; ?>); 
+                <div class="modal-content" style="padding: 54%; background: url(<?php echo $product['img_url']; ?>); 
                   background-size: cover; background-repeat: no-repeat;">
                 </div>
               </div>
@@ -126,18 +127,19 @@ function display_product_data(){
 
       <!-- Add to cart functionality -->
       <!-- TODO: fix the endpoint functionality and DOM manipulation total price -->
-      <form action="" method="post">
+      <form action="">
         <input type="hidden" name="total_price">
         <div class="product-quantity" data-title="Quantity">
           <div class="quantity">
             <div class="bizberg-shop-quantity">
-            <button type="button" class="minus">-</button>	
-              <input type="number" id="quantity_60675e4827cb3" class="input-text qty text" step="1" min="0" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
-              <button type="button" class="plus">+</button>
+              <button type="button" class="minus" onclick="updateAmountTotal(-1)">-</button>	
+              <input type="number" id="quantity-product" onkeyup="updateAmountTotal(0)" class="input-text qty text" step="1" min="1" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
+              <button type="button" class="plus" onclick="updateAmountTotal(1)">+</button>
             </div>	
           </div>
         </div><br>
-        <input type="submit" value="Add to Cart" class="btn-submit"/>
+        <!-- TODO: add to cart functionality with correct params -->
+        <button onclick="addToCart('test')" class="btn-submit">Toevoegen aan winkelwagen</button>
       </form>
     </div> <!-- col-lg-6 -->
   <?php
