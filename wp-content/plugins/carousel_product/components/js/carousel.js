@@ -33,7 +33,7 @@ function updateProductData(className){
   }
   
   // Showing product info on change carousel
-  let title = obj_pots.names[counters[0]] + " & " + obj_plants.names[counters[1]];
+  let title = obj_plants.names[counters[1]] + " & " + obj_pots.names[counters[0]];
   document.getElementById('name-products').innerHTML = title;
 
   let totalPrice = obj_pots.prices[counters[0]] + obj_plants.prices[counters[1]];
