@@ -120,7 +120,7 @@ function display_product_data(){
   ?>
     <div class="col-lg-6">
       <!-- Product info such as price comes here -->
-      <h1 id="name-products"></h1><br>
+      <h2 id="name-products"></h2><br>
       <p id="description"></p><br>
       <h4 id="total-price"></h4><br>
 

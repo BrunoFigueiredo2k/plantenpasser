@@ -101,3 +101,14 @@ img {vertical-align: middle;}
 .modal-open .modal{
   margin-top: 5vh;
 }
+
+.card-product-info{
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-product-info .title{
+  margin: 0 0 10px 0;
+}

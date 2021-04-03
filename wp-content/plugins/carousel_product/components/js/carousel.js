@@ -40,7 +40,12 @@ function updateProductData(className){
   document.getElementById('total-price').innerHTML = `<b>Total:</b> ${totalPrice} EUR`;
 
   document.getElementById('description').innerHTML = `
-    <b>Plant:</b> ${obj_plants.descriptions[counters[1]]}<br><br>
-    <b>Pot: </b> ${obj_pots.descriptions[counters[0]]}
+    <div class="card-product-info">
+      <h4 class="title">Plant</h4>
+      ${obj_plants.descriptions[counters[1]]}
+      <hr>
+      <h4 class="title">Pot</h4>
+      ${obj_pots.descriptions[counters[0]]}
+    </div>
   `;
 }
