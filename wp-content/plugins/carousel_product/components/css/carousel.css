@@ -1,87 +1,103 @@
 .mySlides {display: none}
-    img {vertical-align: middle;}
-    .mySlides img{
-        margin: 0 auto;
-    }
-    
-    /* Slideshow container */
-    .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-    }
-    
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 10px 15px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.2s ease;
-      user-select: none;
-      line-height: 18px;
-      line-height: 20px;
-      color: black;
-      border: 1px solid;
-      border-radius: 5px;
-    }
-    
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-      color: white !important;
-    }
-    
-    .bottom-carousel{
-      margin: 0 auto;
-      width: 55%;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.3);
-      color: white;
-      padding: 10px 0;
-    }
-    
-    /* Caption text */
-    .name-product, .price-product {
-      font-size: 15px;
-      padding: 8px 12px;
-    }
+img {vertical-align: middle;}
+.mySlides img{
+    margin: 0 auto;
+}
 
-    .price-product{
-      font-weight: bold;
-    }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
 
+/* Next & previous buttons */
+.prev, .next {
+  display: inherit;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px 15px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.2s ease;
+  user-select: none;
+  line-height: 18px;
+  line-height: 20px;
+  color: black;
+  border: 1px solid;
+  border-radius: 5px;
+}
 
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      opacity: 1;
-      animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    
-    /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
-      .prev, .next,.text {font-size: 11px}
-    }
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white !important;
+}
+
+.bottom-carousel{
+  margin: 0 auto;
+  width: 55%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px 0;
+}
+
+/* Caption text */
+.name-product, .price-product {
+  font-size: 15px;
+  padding: 8px 12px;
+}
+
+.price-product{
+  font-weight: bold;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  opacity: 1;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.carousel-image{
+  max-height: 300px;
+}
+
+.carousel-image:hover{
+  cursor: pointer;
+}
+
+.modal .carousel-image{
+  margin: 0 auto;
+}
+
+.modal-open .modal{
+  margin-top: 5vh;
+}

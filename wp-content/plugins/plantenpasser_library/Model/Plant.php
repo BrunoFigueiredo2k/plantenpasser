@@ -11,7 +11,7 @@ class Plant
 
     public function __construct($product_id, $name, $price, $length, $width, $img_url, $description)
     {
-        $this->name = $product_id;
+        $this->product_id = $product_id;
         $this->name = $name;
         $this->price = $price;
         $this->length = $length;
