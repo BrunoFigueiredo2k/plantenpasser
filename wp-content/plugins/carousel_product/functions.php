@@ -130,7 +130,7 @@ function display_product_data(){
           <div class="quantity">
             <div class="bizberg-shop-quantity">
               <button type="button" class="minus" onclick="updateAmountTotal(-1)">-</button>	
-              <input type="number" id="quantity-product" onkeyup="updateAmountTotal(0)" class="input-text qty text" step="1" min="1" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
+              <input type="number" id="quantity-product" onkeyup="updateAmountTotal(0)" oninput="validity.valid||(value='1');" class="input-text qty text" step="1" min="1" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
               <button type="button" class="plus" onclick="updateAmountTotal(1)">+</button>
             </div>	
           </div>
