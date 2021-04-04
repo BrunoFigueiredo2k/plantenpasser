@@ -64,6 +64,11 @@ function updateAmountTotal(n){
     counterAmountTotal += n; // Else we add the passed argument to the value
   }
 
+  if (document.getElementById('quantity-product').value < 0) {
+    document.getElementById('quantity-product').value = 1;
+    return;
+  }
+
   // Update total price
   document.getElementById('total-price-value').innerText = Math.round((totalPrice * counterAmountTotal) * 100) / 100
 }
