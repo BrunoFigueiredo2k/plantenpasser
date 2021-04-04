@@ -121,3 +121,20 @@ hr{
 .border-right{
   border-right: 1px solid#cccccc91 !important;;
 }
+
+.product-icon {
+  background: #f2f0ef;
+  border-radius: 100%;
+  padding: 2px;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-icon-txt{
+  vertical-align: super;
+  margin-right: 20px;
+}

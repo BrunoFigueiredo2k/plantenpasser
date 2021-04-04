@@ -63,7 +63,7 @@ function product_carousel(){
 
           <?php
           // Declare empty arrays of product info per category
-          $product_names = $product_prices = $product_descriptions = [];
+          $product_names = $product_prices = $product_descriptions = $product_widths = $product_lengths = [];
 
           ?> 
           <?php
@@ -96,18 +96,25 @@ function product_carousel(){
             array_push($product_names, $product['name']);
             array_push($product_prices, floatval($product['price']));
             array_push($product_descriptions, $product['description']);
+            array_push($product_widths, $product['width']);
+            array_push($product_lengths, $product['length']);
           }
 
           // Convert object of prices and names of category to js object
           php_to_javascript_variables(array("obj_{$category}" => array(
             'names' => $product_names, 
             'prices' => $product_prices,
-            'descriptions' => $product_descriptions
+            'descriptions' => $product_descriptions,
+            'widths' => $product_widths,
+            'lengths' => $product_lengths
           )));
           ?>
 
         </div>
       <?php } ?>
+      <div class="text-center mt-20">
+        <button onclick="randomizeProductsCarousel(5)" class="btn-submit" style="width: 100%;">Verras me!</button>
+      </div>
     </div> <!-- col-lg-5 -->
     <?php display_product_data(); ?>
   </div> <!-- row -->
