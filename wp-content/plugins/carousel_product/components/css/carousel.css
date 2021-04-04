@@ -18,17 +18,16 @@ img {vertical-align: middle;}
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 10px 15px;
+  padding: 15px;
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
-  transition: 0.2s ease;
+  font-size: 34px;
+  transition: 250ms ease;
   user-select: none;
   line-height: 18px;
   line-height: 20px;
   color: black;
-  border: 1px solid;
   border-radius: 5px;
   z-index: 1000;
 }
@@ -40,8 +39,9 @@ img {vertical-align: middle;}
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white !important;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  /* background-color: rgba(0,0,0,0.8); */
+  /* color: white !important; */
 }
 
 .bottom-carousel{
