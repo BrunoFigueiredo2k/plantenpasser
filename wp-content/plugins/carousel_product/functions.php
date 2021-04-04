@@ -62,21 +62,18 @@ function product_carousel(){
             </script>
 
           <?php
-          // Keeping count of index to determine whether last product in loop later
-          $numItems = count($data[$key][0]);
-          $i = 0;
-
           // Declare empty arrays of product info per category
           $product_names = $product_prices = $product_descriptions = [];
 
           ?> 
           <?php
+          $i = 0;
           foreach ($data[$key][0] as $key => $product) { 
             $modal_id = "exampleModalCenter".$product['product_id'];
             ?>
             <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
               // Displays only the last item as 'block', this is the first product seen in carousel
-              if(++$i === $numItems) { echo "block"; } else { echo "none;"; }; ?>">
+              if(++$i === 1) { echo "block"; } else { echo "none;"; }; ?>">
               <img src="<?php echo $product['img_url']; ?>" alt="<?php echo $product['name']; ?>" class="carousel-image" 
               data-toggle="modal" data-target="#<?php echo $modal_id;?>">
               <p class="bottom-carousel">
