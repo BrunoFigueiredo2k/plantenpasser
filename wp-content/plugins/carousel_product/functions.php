@@ -27,9 +27,7 @@ function product_carousel(){
     <?php 
       $data = array(
         'plants' => array(),
-        'pots' => array(),
-        'currentPlant' => null,
-        'currentPot' => null
+        'pots' => array()
       );
 
       array_push($data['plants'], get_products('plants'));
