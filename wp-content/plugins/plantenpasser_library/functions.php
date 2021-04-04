@@ -95,8 +95,6 @@ function php_to_javascript_variables($object) {
           case "object":
               echo "var {$property} = JSON.parse(\"" . addslashes(json_encode($value)) . "\")";
               break;
-          case "null":
-              echo "var {$property} = null";
           default:
               echo "console.log(\"Unknown variable type: " . addslashes($property) . ");";
               break;
