@@ -43,13 +43,10 @@ function updateProductData(className){
   document.getElementById('total-price').innerHTML = `<b>Totaal:</b> <span id="total-price-value">${totalPrice * counterAmountTotal}</span> EUR`;
 
   document.getElementById('description').innerHTML = `
-    <div class="card-product-info">
       <h4 class="title">Plant</h4>
       ${obj_plants.descriptions[counters[1]]}
-      <hr>
       <h4 class="title">Pot</h4>
       ${obj_pots.descriptions[counters[0]]}
-    </div>
   `;
 }
 

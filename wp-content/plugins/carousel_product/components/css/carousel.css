@@ -30,6 +30,7 @@ img {vertical-align: middle;}
   color: black;
   border: 1px solid;
   border-radius: 5px;
+  z-index: 1000;
 }
 
 /* Position the "next button" to the right */
@@ -45,9 +46,9 @@ img {vertical-align: middle;}
 
 .bottom-carousel{
   margin: 0 auto;
-  width: 55%;
+  width: 250px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #1f2024;
   color: white;
   padding: 10px 0;
 }
@@ -87,7 +88,7 @@ img {vertical-align: middle;}
 }
 
 .carousel-image{
-  max-height: 300px;
+  max-height: 250px;
 }
 
 .carousel-image:hover{
@@ -104,11 +105,19 @@ img {vertical-align: middle;}
 
 .card-product-info{
   margin: 5px;
-  padding: 15px;
+  padding: 20px 15px;
   border-radius: 5px;
-  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.025);
 }
 
 .card-product-info .title{
-  margin: 0 0 10px 0;
+  margin: 10px 0;
+}
+
+hr{
+  background-color: #cccccc91 !important;
+}
+
+.border-right{
+  border-right: 1px solid#cccccc91 !important;;
 }

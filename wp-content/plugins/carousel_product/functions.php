@@ -35,8 +35,8 @@ function product_carousel(){
     ?>
 
 </div>
-  <div class="row">
-    <div class="col-lg-6">
+  <div class="row mb-50">
+    <div class="col-sm-5 mt-20">
       <?php foreach ($data as $key => $value) { ?>
         <!-- Carousel -->
         <div class="slideshow-container mt-4">
@@ -108,7 +108,7 @@ function product_carousel(){
 
         </div>
       <?php } ?>
-    </div> <!-- col-lg-6 -->
+    </div> <!-- col-lg-5 -->
     <?php display_product_data(); ?>
   </div> <!-- row -->
   <?php
@@ -116,28 +116,40 @@ function product_carousel(){
 
 function display_product_data(){
   ?>
-    <div class="col-lg-6">
+    <div class="col-sm-7 mt-20">
       <!-- Product info such as price comes here -->
-      <h2 id="name-products"></h2><br>
-      <p id="description"></p><br>
-      <h4 id="total-price"></h4><br>
+      <div class="card-product-info">
+        <h2 id="name-products" style="font-weight: 800;"></h2>
+        <hr>
+        <p id="description"></p>
+        <hr>
+        <h4 id="total-price"></h4>
+      </div>
 
       <!-- Add to cart functionality -->
       <!-- TODO: fix the endpoint functionality and DOM manipulation total price -->
+      <br>
       <form action="">
         <input type="hidden" name="total_price">
-        <div class="product-quantity" data-title="Quantity">
-          <div class="quantity">
-            <div class="bizberg-shop-quantity">
-              <button type="button" class="minus" onclick="updateAmountTotal(-1)">-</button>	
-              <input type="number" id="quantity-product" onkeyup="updateAmountTotal(0)" oninput="validity.valid||(value='1');" class="input-text qty text" step="1" min="1" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
-              <button type="button" class="plus" onclick="updateAmountTotal(1)">+</button>
-            </div>	
+        <div class="row">
+          <div class="col-md-6">
+            <div class="product-quantity" data-title="Quantity">
+              <div class="quantity">
+                <div class="bizberg-shop-quantity">
+                  <button type="button" class="minus" onclick="updateAmountTotal(-1)">-</button>	
+                  <input type="number" id="quantity-product" onkeyup="updateAmountTotal(0)" oninput="validity.valid||(value='1');" class="input-text qty text" step="1" min="1" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
+                  <button type="button" class="plus" onclick="updateAmountTotal(1)">+</button>
+                </div>	
+              </div>
+            </div>
           </div>
-        </div><br>
-        <!-- TODO: add to cart functionality with correct params -->
-        <button onclick="addToCart('test')" class="btn-submit">Toevoegen aan winkelwagen</button>
+          <div class="col-md-6">
+            <!-- TODO: add to cart functionality with correct params -->
+            <button onclick="addToCart('test')" class="btn-submit">Toevoegen aan winkelmand</button>
+          </div>
+        </div>
+        
       </form>
-    </div> <!-- col-lg-6 -->
+    </div> <!-- col-lg-7 -->
   <?php
 }
