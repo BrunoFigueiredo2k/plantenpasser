@@ -1,6 +1,5 @@
 <?php
-class Pot
-{
+class Pot {
     private $product_id;
     private $name;
     private $price;
@@ -11,8 +10,7 @@ class Pot
     private $weight;
     private $description;
 
-    public function __construct($product_id, $name, $price, $length, $width, $color, $img_url, $weight, $description)
-    {
+    public function __construct($product_id, $name, $price, $length, $width, $color, $img_url, $weight, $description) {
         $this->product_id = $product_id;
         $this->name = $name;
         $this->price = $price;

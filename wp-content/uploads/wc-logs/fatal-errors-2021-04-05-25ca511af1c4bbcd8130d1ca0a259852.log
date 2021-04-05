@@ -1,0 +1,22 @@
+2021-04-05T16:53:37+00:00 CRITICAL Uncaught Error: Call to undefined function strlower() in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:172
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(157): createProductCombinations()
+#1 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(121): display_product_data()
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(292): do_shortcode('[carousel_short...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#7 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-fun in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 172
+
+2021-04-05T16:53:41+00:00 CRITICAL Uncaught Error: Call to undefined function strlower() in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php:172
+Stack trace:
+#0 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(157): createProductCombinations()
+#1 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php(121): display_product_data()
+#2 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(343): product_carousel('', '', 'carousel_shortc...')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 D:\xampp\htdocs\plantenpassernl\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(carous...', 'do_shortcode_ta...', '[carousel_short...')
+#5 D:\xampp\htdocs\plantenpassernl\wp-includes\class-wp-hook.php(292): do_shortcode('[carousel_short...')
+#6 D:\xampp\htdocs\plantenpassernl\wp-includes\plugin.php(212): WP_Hook->apply_filters('[carousel_short...', Array)
+#7 D:\xampp\htdocs\plantenpassernl\wp-content\plugins\woocommerce\includes\wc-formatting-fun in D:\xampp\htdocs\plantenpassernl\wp-content\plugins\carousel_product\functions.php on line 172
+

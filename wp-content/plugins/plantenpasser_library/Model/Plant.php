@@ -1,6 +1,5 @@
 <?php
-class Plant
-{
+class Plant {
     private $product_id;
     private $name;
     private $price;
@@ -9,8 +8,7 @@ class Plant
     private $img_url;
     private $description;
 
-    public function __construct($product_id, $name, $price, $length, $width, $img_url, $description)
-    {
+    public function __construct($product_id, $name, $price, $length, $width, $img_url, $description) {
         $this->product_id = $product_id;
         $this->name = $name;
         $this->price = $price;
