@@ -2,15 +2,13 @@ jQuery(function ($) {
     $("#cart-form").submit(function(e) {
         // If input is empty and user tries to add to cart then return false
         if (counterAmountTotal === 0) {
-            document.getElementById('status-submit').innerHTML = `
-            <div class="alert alert-danger text-center" role="alert" id="alert-failure-cart">
-                De hoeveelheid is incorrect, selecteer een positief getal.
-            </div>`;
-            e.preventDefault();
-            $('#alert-failure-cart').delay(5000).fadeOut(400)
+            document.getElementById('status-submit').innerHTML = displayBootstrapAlert('danger', 'De hoeveelheid is incorrect, selecteer een positief getal.');
         } else {
             addToCart();
         }
+        $('#alert-box').delay(5000).fadeOut(400);
+        // Prevent page refresh
+        e.preventDefault();
     });
 });
 
@@ -25,7 +23,8 @@ function addToCart(){
             url: `../wp-content/plugins/carousel_product/endpoints/add_to_cart.php?${formatProductsParam(productIds)}&quantity=${quantity}`,
             data: $('form').serialize(),
             success: function () {
-                alert('form was submitted');
+                document.getElementById('status-submit').innerHTML = displayBootstrapAlert('success', 'Items toegevoegd aan uw winkelmandje!');
+                $('#alert-box').delay(5000).fadeOut(400);
             },
             error: function(requestObject, error, errorThrown) {
                 alert(error);

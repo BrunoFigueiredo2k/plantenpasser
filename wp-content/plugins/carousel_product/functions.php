@@ -24,6 +24,7 @@ function product_carousel(){
   include_component(JS_COMPONENTS_DIR . 'carousel.js');
   include_component(JS_COMPONENTS_DIR . 'cart.js');
   ?>
+  <script src="../wp-content/plugins/plantenpasser_library/js/Components.js"></script>
     <?php 
       $data = array(
         'plants' => array(),
@@ -33,7 +34,6 @@ function product_carousel(){
       array_push($data['plants'], get_products('plants'));
       array_push($data['pots'], get_products('pots'));
     ?>
-
 </div>
   <div class="row mb-50">
     <div class="col-sm-5 mt-20">
@@ -134,10 +134,8 @@ function display_product_data(){
       </div>
 
       <!-- Add to cart functionality -->
-      <!-- TODO: fix the endpoint functionality and DOM manipulation total price -->
       <br>
       <form action="" id="cart-form">
-        <input type="hidden" name="total_price">
         <div class="row">
           <div class="col-md-5">
             <div class="product-quantity" data-title="Quantity">
@@ -151,7 +149,6 @@ function display_product_data(){
             </div>
           </div>
           <div class="col-md-7">
-            <!-- TODO: add to cart functionality with correct params -->
             <input type="submit" class="btn-submit" id="add-to-cart-btn" style="float: right;" value="Toevoegen aan winkelmand">
           </div>
         </div>
