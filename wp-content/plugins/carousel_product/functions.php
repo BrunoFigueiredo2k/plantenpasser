@@ -62,19 +62,20 @@ function product_carousel(){
 
           <?php
           // Declare empty arrays of product info per category
-          $product_names = $product_prices = $product_descriptions = $product_widths = $product_lengths = [];
+          $product_ids = $product_names = $product_prices = $product_descriptions = $product_widths = $product_lengths = [];
 
           ?> 
           <?php
           $i = 0;
           foreach ($data[$key][0] as $key => $product) { 
-            $modal_id = "exampleModalCenter".$product['product_id'];
+            $modal_id = "modal-".$product['product_id'];
+            $slide_id = "slide-".$product['product_id'];
             ?>
             <div class="<?php echo $carousel_slides_class?> mySlides fade" style="display: <?php 
               // Displays only the last item as 'block', this is the first product seen in carousel
               if(++$i === 1) { echo "block"; } else { echo "none;"; }; ?>">
               <img src="<?php echo $product['img_url']; ?>" alt="<?php echo $product['name']; ?>" class="carousel-image" 
-              data-toggle="modal" data-target="#<?php echo $modal_id;?>">
+              data-toggle="modal" data-target="#<?php echo $modal_id;?>" id="<?php echo $slide_id;?>">
               <p class="bottom-carousel">
                 <span class="name-product"><?php echo $product['name'];?></span>
                 <span class="price-product"><?php echo $product['price']. " EUR"; ?></span>                  
@@ -92,6 +93,7 @@ function product_carousel(){
 
             <?php 
             // Push names and prices to the category js object
+            array_push($product_ids, $product['product_id']);
             array_push($product_names, $product['name']);
             array_push($product_prices, floatval($product['price']));
             array_push($product_descriptions, $product['description']);
@@ -101,6 +103,7 @@ function product_carousel(){
 
           // Convert object of prices and names of category to js object
           php_to_javascript_variables(array("obj_{$category}" => array(
+            'product_ids' => $product_ids, 
             'names' => $product_names, 
             'prices' => $product_prices,
             'descriptions' => $product_descriptions,
@@ -135,7 +138,7 @@ function display_product_data(){
       <!-- Add to cart functionality -->
       <!-- TODO: fix the endpoint functionality and DOM manipulation total price -->
       <br>
-      <form action="">
+      <form action="" id="cart-form">
         <input type="hidden" name="total_price">
         <div class="row">
           <div class="col-md-5">
@@ -143,7 +146,7 @@ function display_product_data(){
               <div class="quantity">
                 <div class="bizberg-shop-quantity">
                   <button type="button" class="minus" onclick="updateAmountTotal(-1)">-</button>	
-                  <input type="number" id="quantity-product" onkeyup="updateAmountTotal(0)" oninput="validity.valid||(value='1');" class="input-text qty text" step="1" min="1" max="" name="cart[1534b76d325a8f591b52d302e7181331][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
+                  <input type="number" id="quantity-product" onkeyup="updateAmountTotal(0)" oninput="validity.valid||(value='1');" class="input-text qty text" step="1" min="1" max="" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
                   <button type="button" class="plus" onclick="updateAmountTotal(1)">+</button>
                 </div>	
               </div>
@@ -151,11 +154,11 @@ function display_product_data(){
           </div>
           <div class="col-md-7">
             <!-- TODO: add to cart functionality with correct params -->
-            <button onclick="addToCart('test')" class="btn-submit" style="float: right;">Toevoegen aan winkelmand</button>
+            <input type="submit" class="btn-submit" id="add-to-cart-btn" style="float: right;" value="Toevoegen aan winkelmand">
           </div>
         </div>
-        
       </form>
+      <div class="status-submission mt-10" id="status-submit"></div>
     </div> <!-- col-lg-7 -->
   <?php
 }

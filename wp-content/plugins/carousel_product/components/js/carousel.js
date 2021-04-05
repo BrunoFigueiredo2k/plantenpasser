@@ -68,8 +68,8 @@ function updateProductData(className){
 }
 
 function updateAmountTotal(n){
-  // If counter is already at one and user clicks minus then dont subtract (minimum is 1)
-  if (counterAmountTotal == 1 && n == -1) return;
+  // If counter is already at one or zero and user clicks minus then dont subtract (minimum is 1)
+  if ((counterAmountTotal == 1 || counterAmountTotal == 0) && n == -1) return;
 
   // If counter argument passed is 0 then that means user has changed number in input field so we set the counter to that value
   if (n == 0) {
