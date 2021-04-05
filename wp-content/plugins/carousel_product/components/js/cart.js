@@ -1,3 +1,4 @@
+// Add to cart submission functionality
 jQuery(function ($) {
     $("#cart-form").submit(function(e) {
         // If input is empty and user tries to add to cart then return false
@@ -19,16 +20,18 @@ function addToCart(){
 
     jQuery(function ($) {
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: `../wp-content/plugins/carousel_product/endpoints/add_to_cart.php?${formatProductsParam(productIds)}&quantity=${quantity}`,
             data: $('form').serialize(),
+            beforeSend: function() {
+                document.getElementById('status-submit').innerHTML = displayLoadingIcon();
+            },
             success: function () {
                 document.getElementById('status-submit').innerHTML = displayBootstrapAlert('success', 'Items toegevoegd aan uw winkelmandje!');
                 $('#alert-box').delay(5000).fadeOut(400);
             },
             error: function(requestObject, error, errorThrown) {
-                alert(error);
-                alert(errorThrown);
+                alert(`ERROR: something went wrong! - ${error}, ${errorThrown}`);
            }
         });
     });
