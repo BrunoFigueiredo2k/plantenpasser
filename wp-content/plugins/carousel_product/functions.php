@@ -55,7 +55,6 @@ function product_carousel(){
 
           <script>
             // Display the current carousel items stats to the page
-            // TODO: still not completely correct at first
             document.addEventListener("DOMContentLoaded", function(){
               updateProductData(carousel_slides_class_<?php echo $category ?>);
             });
@@ -113,7 +112,7 @@ function product_carousel(){
         </div>
       <?php } ?>
       <div class="text-center mt-20">
-        <button onclick="randomizeProductsCarousel(5)" class="btn-submit" style="width: 100%;">Verras me!</button>
+        <button onclick="randomizeProductsCarousel()" class="btn-submit" style="width: 100%;">Verras me!</button>
       </div>
     </div> <!-- col-lg-5 -->
     <?php display_product_data(); ?>
@@ -139,7 +138,7 @@ function display_product_data(){
       <form action="">
         <input type="hidden" name="total_price">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="product-quantity" data-title="Quantity">
               <div class="quantity">
                 <div class="bizberg-shop-quantity">
@@ -150,9 +149,9 @@ function display_product_data(){
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-7">
             <!-- TODO: add to cart functionality with correct params -->
-            <button onclick="addToCart('test')" class="btn-submit">Toevoegen aan winkelmand</button>
+            <button onclick="addToCart('test')" class="btn-submit" style="float: right;">Toevoegen aan winkelmand</button>
           </div>
         </div>
         

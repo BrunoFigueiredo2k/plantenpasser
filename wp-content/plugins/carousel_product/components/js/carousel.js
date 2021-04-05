@@ -29,10 +29,10 @@ function showSlides(n, className) {
   updateProductData(className);
 }
 
-function randomizeProductsCarousel(max){
+function randomizeProductsCarousel(){
   // Simulate click on next previous with random number for both carousels
-  plusSlides(Math.floor(Math.random() * max), carousel_slides_class_plants);
-  plusSlides(Math.floor(Math.random() * max), carousel_slides_class_pots);
+  plusSlides(Math.floor(Math.random() * obj_plants.names.length), carousel_slides_class_plants);
+  plusSlides(Math.floor(Math.random() * obj_pots.names.length), carousel_slides_class_pots);
 }
 
 function updateProductData(className){
