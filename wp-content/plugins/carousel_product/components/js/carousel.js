@@ -44,21 +44,18 @@ function updateProductData(className){
   }
   
   // Showing product info on change carousel
-  let title = obj_plants.names[counters[1]] + " & " + obj_pots.names[counters[0]];
-  document.getElementById('name-products').innerHTML = title;
-
   totalPrice = obj_pots.prices[counters[0]] + obj_plants.prices[counters[1]];
   document.getElementById('total-price').innerHTML = `<b>Totaal:</b> <span id="total-price-value">${totalPrice * counterAmountTotal}</span> EUR`;
 
   document.getElementById('description').innerHTML = `
-      <h4 class="title">Plant</h4>
+      <h3 class="title">${obj_plants.names[counters[1]]}</h3>
       ${obj_plants.descriptions[counters[1]]}<br>
       <ul class="horizontal-list">
         <li><span class="product-icon">${heightSVG}</span><b class="product-icon-txt">${obj_plants.lengths[counters[1]]} cm</b></li>
         <li><span class="product-icon">${widthSVG}</span><b class="product-icon-txt">${obj_plants.widths[counters[1]]} cm</b></li>
       </ul>
-
-      <h4 class="title">Pot</h4>
+      <br>
+      <h3 class="title">${obj_pots.names[counters[0]]}</h3>
       ${obj_pots.descriptions[counters[0]]}<br>
       <ul class="horizontal-list">
         <li><span class="product-icon">${heightSVG}</span><b class="product-icon-txt">${obj_pots.lengths[counters[0]]} cm</b></li>

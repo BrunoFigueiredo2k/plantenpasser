@@ -4,7 +4,7 @@ jQuery(function ($) {
         if (counterAmountTotal === 0) {
             document.getElementById('status-submit').innerHTML = `
             <div class="alert alert-danger text-center" role="alert" id="alert-failure-cart">
-                De hoeveelheid is nu 0, selecteer een positief getal.
+                De hoeveelheid is incorrect, selecteer een positief getal.
             </div>`;
             e.preventDefault();
             $('#alert-failure-cart').delay(5000).fadeOut(400)

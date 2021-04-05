@@ -128,8 +128,6 @@ function display_product_data(){
     <div class="col-sm-7 mt-20">
       <!-- Product info such as price comes here -->
       <div class="card-product-info">
-        <h2 id="name-products" style="font-weight: 800;"></h2>
-        <hr>
         <p id="description"></p>
         <hr>
         <h4 id="total-price"></h4>
